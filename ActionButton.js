@@ -6,6 +6,7 @@ import {
   Animated,
   TouchableOpacity,
   TouchableWithoutFeedback,
+  SafeAreaView,
 } from "react-native";
 import PropTypes from "prop-types";
 import ActionButtonItem from "./ActionButtonItem";
@@ -103,7 +104,7 @@ export default class ActionButton extends Component {
 
   renderButton() {
     return (
-      <View style={this.getActionButtonStyle()}>
+      <SafeAreaView style={this.getActionButtonStyle()}>
         <TouchableOpacity
           activeOpacity={0.85}
           onLongPress={this.props.onLongPress}
@@ -145,7 +146,7 @@ export default class ActionButton extends Component {
             {this.renderButtonIcon()}
           </Animated.View>
         </TouchableOpacity>
-      </View>
+      </SafeAreaView>
     );
   }
 
